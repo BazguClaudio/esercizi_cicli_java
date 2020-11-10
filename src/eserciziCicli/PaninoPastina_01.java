@@ -7,14 +7,14 @@ public class PaninoPastina_01 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         double soldiMario;
-        int quantPastina = 0, quantPanino = 0, giorni = 2;
+        int quantPastina = 0, quantPanino = 0, giorni = 0;
         int giorniSout = giorni;
         System.out.println("quanti soldi ha mario?");
         soldiMario = input.nextDouble();
         final double pastina = 1;
         final double panino = 1.5;
         boolean vuoiMangiare = true;
-        while (soldiMario > 0 && vuoiMangiare && giorni > 0) {
+        while (soldiMario > 0 && vuoiMangiare) {
             System.out.println("ciao mario vuoi mangiare?");
 
             String conferma = "";
@@ -23,6 +23,7 @@ public class PaninoPastina_01 {
                 vuoiMangiare = false;
             }
             if (conferma.equals("si")) {
+                giorni += 1;
                 while (vuoiMangiare) {
                     System.out.println("cosa vuoi mangiare: panino o pastina?");
                     String cibo = input.nextLine();
@@ -51,7 +52,6 @@ public class PaninoPastina_01 {
                     }
                 }
             }
-            giorni -= 1;
         }
         System.out.println("mario ha mangiato " + quantPanino + " panini e " + quantPastina + " pastine per " + giorniSout + " giorni.");
     }
