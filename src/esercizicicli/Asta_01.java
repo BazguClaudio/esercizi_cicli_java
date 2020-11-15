@@ -1,4 +1,4 @@
-package esercizicicli;
+package eserciziCicli;
 
 import java.util.Scanner;
 
